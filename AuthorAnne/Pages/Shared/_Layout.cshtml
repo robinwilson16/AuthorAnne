@@ -13,46 +13,140 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
               crossorigin="anonymous"
-              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE="/>
+              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">AuthorAnne</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
+    <nav class="navbar sticky-top navbar-expand-sm navbar-toggleable-sm navbar-light bg-white mb-3">
         <div class="container">
-            &copy; 2018 - AuthorAnne - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <a class="navbar-brand" asp-area="" asp-page="/Index">
+                <img src="~/images/AuthorAnneLogo.png" class="img-fluid mx-auto d-block LogoNavbar" alt="Author Anne">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <partial name="_LoginPartial" />
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle red" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" asp-area="" asp-page="/Index">Home</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" asp-area="" asp-page="/Index#News">Current News</a>
+                            <a class="dropdown-item" asp-area="" asp-page="/Index#Writing">Being a Writer / Becoming an Author</a>
+                            <a class="dropdown-item" asp-area="" asp-page="/Index#Tips">Tips</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" asp-area="" asp-page="/Index#ContactMe">Contact Me</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle blue" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" asp-area="" asp-page="/About">About</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" asp-area="" asp-page="/About#Me">About Me</a>
+                            <a class="dropdown-item" asp-area="" asp-page="/About#Writing">About Writing</a>
+                            <a class="dropdown-item" asp-area="" asp-page="/About#Tips">Tips</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" asp-area="" asp-page="/About#FirstNovel">About My First Novel</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle yellow" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" asp-area="" asp-page="/Reviews">Reviews</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" asp-area="" asp-page="/Reviews#WishingShelfBookAwards">The Wishing Shelf Book Awards 2014 for Here Be Dragons</a>
+                            <a class="dropdown-item" asp-area="" asp-page="/Reviews#ReadersComments">Readers' Comments</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Here Be Dragons Reviews</h6>
+                            <a class="dropdown-item" asp-area="" asp-page="/Reviews#JackMagnus">Jack Magnus for Readers' Favorite (5 STARS)</a>
+                            <a class="dropdown-item" asp-area="" asp-page="/Reviews#DianeDonovan">Diane Donovan: Senior Reviewer for The Midwest Book Review</a>
+                            <a class="dropdown-item" asp-area="" asp-page="/Reviews#KaytiNikaRaet">Kayti Nika Raet for Readers' Favorite (4 STARS)</a>
+                            <a class="dropdown-item" asp-area="" asp-page="/Reviews#TaniaStaley">Tania Staley for Readers' Favorite (4 STARS)</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark green" asp-area="" asp-page="/Anthologies">Anthologies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark red" asp-area="" asp-page="/Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </footer>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md Paper">
+                <div class="PageCurlTop"></div>
+                <div class="PageCurlBottom"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg">
+                            <a asp-page="/">
+                                <img src="~/images/AuthorAnneLogo.png" class="img-fluid mx-auto d-block" alt="Author Anne">
+                            </a>
+                        </div>
+                        <div class="col-lg text-center align-self-center">
+                            <h1>authoranne.co.uk</h1>
+                        </div>
+                    </div>
+                    <div class="row BuyBook">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <a href="https://www.feedaread.com/books/Here-Be-Dragons-9781784079925.aspx" target="_blank">
+                                        <img class="BuyBookImg" src="~/images/HereBeDragons2014.png" alt="Buy My Book - Here Be Dragons">
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="col text-center">
+                                    <a href="https://www.feedaread.com/books/Here-Be-Dragons-9781784079925.aspx" target="_blank" class="btn btn-sm btn-primary">
+                                        Buy My Book
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="col">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <a href="http://www.amazon.co.uk/gp/product/B00IE3U2PI" target="_blank">
+                                        <img class="BuyBookImg" src="~/images/HereBeDragonsModernTale.png" alt="Buy My Book - Here Be Dragons">
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="col text-center">
+                                    <a href="http://www.amazon.co.uk/gp/product/B00IE3U2PI" target="_blank" class="btn btn-sm btn-primary">
+                                        Buy My Book
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <partial name="_CookieConsentPartial" />
+                    <main role="main" class="pb-3">
+                        @RenderBody()
+                    </main>
+                    <div class="row">
+                        <div class="col-md text-center ReadersFav">
+                            <a href="http://readersfavorite.com/?affiliateID=720" target="_blank">
+                                <img src="http://readersfavorite.com/affiliate/product_images/shiuxohacvedhpb.jpg" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <footer class="footer text-muted">
+                    <div class="container text-center">
+                        &copy; 2018 - Author Anne
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
