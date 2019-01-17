@@ -6,16 +6,17 @@
     <title>@ViewData["Title"] - AuthorAnne</title>
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/ekko-lightbox/ekko-lightbox.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment exclude="Development">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-              crossorigin="anonymous"
-              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/twitter-bootstrap/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/lib/ekko-lightbox/ekko-lightbox.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
-    <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 </head>
 <body>
@@ -32,43 +33,43 @@
                 <partial name="_LoginPartial" />
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle red" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" asp-area="" asp-page="/Index">Home</a>
+                        <a class="nav-link dropdown-toggle red" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Home</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" asp-area="" asp-page="/Index#News">Current News</a>
-                            <a class="dropdown-item" asp-area="" asp-page="/Index#Writing">Being a Writer / Becoming an Author</a>
-                            <a class="dropdown-item" asp-area="" asp-page="/Index#Tips">Tips</a>
+                            <a class="dropdown-item" asp-page="/Index" asp-fragment="News">Current News</a>
+                            <a class="dropdown-item" asp-page="/Index" asp-fragment="Writing">Being a Writer / Becoming an Author</a>
+                            <a class="dropdown-item" asp-page="/Index" asp-fragment="Tips">Tips</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" asp-area="" asp-page="/Index#ContactMe">Contact Me</a>
+                            <a class="dropdown-item" asp-page="/Index" asp-fragment="ContactMe">Contact Me</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle blue" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" asp-area="" asp-page="/About">About</a>
+                        <a class="nav-link dropdown-toggle blue" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">About</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" asp-area="" asp-page="/About#Me">About Me</a>
-                            <a class="dropdown-item" asp-area="" asp-page="/About#Writing">About Writing</a>
-                            <a class="dropdown-item" asp-area="" asp-page="/About#Tips">Tips</a>
+                            <a class="dropdown-item" asp-page="/About" asp-fragment="Me">About Me</a>
+                            <a class="dropdown-item" asp-page="/About" asp-fragment="Writing">About Writing</a>
+                            <a class="dropdown-item" asp-page="/About" asp-fragment="Tips">Tips</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" asp-area="" asp-page="/About#FirstNovel">About My First Novel</a>
+                            <a class="dropdown-item" asp-page="/About" asp-fragment="FirstNovel">About My First Novel</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle yellow" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" asp-area="" asp-page="/Reviews">Reviews</a>
+                        <a class="nav-link dropdown-toggle yellow" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Reviews</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" asp-area="" asp-page="/Reviews#WishingShelfBookAwards">The Wishing Shelf Book Awards 2014 for Here Be Dragons</a>
-                            <a class="dropdown-item" asp-area="" asp-page="/Reviews#ReadersComments">Readers' Comments</a>
+                            <a class="dropdown-item" asp-page="/Reviews" asp-fragment="WishingShelfBookAwards">The Wishing Shelf Book Awards 2014 for Here Be Dragons</a>
+                            <a class="dropdown-item" asp-page="/Reviews" asp-fragment="ReadersComments">Readers' Comments</a>
                             <div class="dropdown-divider"></div>
                             <h6 class="dropdown-header">Here Be Dragons Reviews</h6>
-                            <a class="dropdown-item" asp-area="" asp-page="/Reviews#JackMagnus">Jack Magnus for Readers' Favorite (5 STARS)</a>
-                            <a class="dropdown-item" asp-area="" asp-page="/Reviews#DianeDonovan">Diane Donovan: Senior Reviewer for The Midwest Book Review</a>
-                            <a class="dropdown-item" asp-area="" asp-page="/Reviews#KaytiNikaRaet">Kayti Nika Raet for Readers' Favorite (4 STARS)</a>
-                            <a class="dropdown-item" asp-area="" asp-page="/Reviews#TaniaStaley">Tania Staley for Readers' Favorite (4 STARS)</a>
+                            <a class="dropdown-item" asp-page="/Reviews" asp-fragment="JackMagnus">Jack Magnus for Readers' Favorite (5 STARS)</a>
+                            <a class="dropdown-item" asp-page="/Reviews" asp-fragment="DianeDonovan">Diane Donovan: Senior Reviewer for The Midwest Book Review</a>
+                            <a class="dropdown-item" asp-page="/Reviews" asp-fragment="KaytiNikaRaet">Kayti Nika Raet for Readers' Favorite (4 STARS)</a>
+                            <a class="dropdown-item" asp-page="/Reviews" asp-fragment="TaniaStaley">Tania Staley for Readers' Favorite (4 STARS)</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark green" asp-area="" asp-page="/Anthologies">Anthologies</a>
+                        <a class="nav-link text-dark green" asp-page="/Anthologies">Anthologies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark red" asp-area="" asp-page="/Contact">Contact</a>
+                        <a class="nav-link text-dark red" asp-page="/Contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -125,7 +126,7 @@
                             </div>
                         </div>
                     </div>
-                    <partial name="_CookieConsentPartial" />
+                    @*<partial name="_CookieConsentPartial" />*@
                     <main role="main" class="pb-3">
                         @RenderBody()
                     </main>
@@ -148,24 +149,25 @@
     </div>
     
     <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="~/lib/jquery/jquery.js" asp-append-version="true"></script>
+        <script src="~/lib/twitter-bootstrap/js/bootstrap.bundle.js" asp-append-version="true"></script>
+        <script src="~/lib/ekko-lightbox/ekko-lightbox.js" asp-append-version="true"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment exclude="Development">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/jquery.min.js"
                 asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+                crossorigin="anonymous">
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/twitter-bootstrap/js/bootstrap.bundle.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha256-E/V4cWE4qvAeO5MOhjtGtqDzPndRO1LBk8lJ/PR7CA4=">
+                crossorigin="anonymous">
         </script>
+        <script src="~/lib/ekko-lightbox/ekko-lightbox.min.js" asp-append-version="true"></script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
-    <script src="~/js/site.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
 </body>

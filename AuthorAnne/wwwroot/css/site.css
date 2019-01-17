@@ -52,8 +52,49 @@ body {
     bottom: 0px;
 }
 
-.pb-3 {
-    margin-top: 50px;
+@media (max-width: 991px) {
+    .pb-3 {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .pb-3 {
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 576px) {
+    .BuyBook {
+    }
+}
+
+@media (min-width: 768px) {
+    .BuyBook {
+    }
+}
+
+@media (min-width: 992px) {
+    .BuyBook {
+        position: absolute;
+        top: 170px;
+        right: 50px;
+        width: 500px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .BuyBook {
+        position: absolute;
+        top: 170px;
+        right: 50px;
+        width: 600px;
+    }
+}
+
+.BuyBook .BuyBookImg {
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    margin-bottom: 8px;
 }
 
 h1 {
@@ -70,6 +111,10 @@ h2 {
 
 h3 {
     font-family: Traveling _Typewriter, serif;
+}
+
+.Spacer {
+    margin-top: 20px;
 }
 
 hr {
@@ -159,39 +204,9 @@ hr {
 	color: #FFF;	
 }
 
-@media (min-width: 576px) {
-    .BuyBook {
-
-    }
-}
-
-@media (min-width: 768px) {
-    .BuyBook {
-        
-    }
-}
-
-@media (min-width: 992px) {
-    .BuyBook {
-        position: absolute;
-        top: 170px;
-        right: 50px;
-        width: 500px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .BuyBook {
-        position: absolute;
-        top: 170px;
-        right: 50px;
-        width: 600px;
-    }
-}
-
-.BuyBook .BuyBookImg {
+.BookFrontCover {
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 }
 
 .ReadersFav {
@@ -206,6 +221,15 @@ hr {
 .btn-primary:hover {
     background-color: #b4ad17;
     border-color: #b4ad17;
+}
+
+img.Headshot {
+    border-radius: 100%;
+    margin-bottom: 8px;
+}
+
+.gallery .img-thumbnail {
+    margin-bottom: 30px;
 }
 
 /*Navbar style from https://work.smarchal.com/twbscolor/css/e74c3cc0392becf0f1ffbbbc0 */
