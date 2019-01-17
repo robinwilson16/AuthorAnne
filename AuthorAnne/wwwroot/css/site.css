@@ -113,6 +113,20 @@ h3 {
     font-family: Traveling _Typewriter, serif;
 }
 
+a:link,
+a:active,
+a:visited {
+    color: #2b61a9;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d51f45;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .Spacer {
     margin-top: 20px;
 }
