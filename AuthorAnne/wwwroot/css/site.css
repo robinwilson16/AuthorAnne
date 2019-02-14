@@ -15,7 +15,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: #2b61a9 url(/images/SpanishTilesBackground.gif);
+    background: #4f3b25 url(/images/FlowerBackground.gif);
 }
 
 .LogoNavbar {
@@ -27,14 +27,14 @@ body {
 .Paper {
     background: #f6f7e0 url(/images/ParchementBackground.png);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    border-top-left-radius: 110px;
-    border-bottom-right-radius: 110px;
+    /*border-top-left-radius: 110px;
+    border-bottom-right-radius: 110px;*/
     position: relative;
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
-.Paper .PageCurlTop {
+/*.Paper .PageCurlTop {
     background-image: url(/images/PageCurlTop.png);
     width: 120px;
     height: 100px;
@@ -50,9 +50,13 @@ body {
     position: absolute;
     right: 0px;
     bottom: 0px;
+}*/
+
+.pb-3 {
+    margin-top: 20px;
 }
 
-@media (max-width: 991px) {
+/*@media (max-width: 991px) {
     .pb-3 {
         margin-top: 20px;
     }
@@ -95,7 +99,7 @@ body {
 .BuyBook .BuyBookImg {
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     margin-bottom: 8px;
-}
+}*/
 
 h1 {
     color: #d51f45;
@@ -221,6 +225,7 @@ hr {
 .BookFrontCover {
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     margin-bottom: 20px;
+    height: 136px;
 }
 
 .ReadersFav {
@@ -244,6 +249,10 @@ img.Headshot {
 
 .gallery .img-thumbnail {
     margin-bottom: 30px;
+}
+
+textarea.form-control {
+    height: 140px;
 }
 
 /*Navbar style from https://work.smarchal.com/twbscolor/css/e74c3cc0392becf0f1ffbbbc0 */

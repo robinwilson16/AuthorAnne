@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AuthorAnne.Pages
 {
-    public class AboutModel : PageModel
+    public class ShowcaseModel : PageModel
     {
         public void OnGet()
         {
