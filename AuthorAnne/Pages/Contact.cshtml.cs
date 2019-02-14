@@ -93,7 +93,7 @@ namespace AuthorAnne.Pages
                     <tr>
                     <td colspan=""4"">
                     <hr stle=""border: 2px solid #d51f45;"" />
-                    <h3 style=""color: #1a9ead;"">Thanks for contacting Author Anne</h3>
+                    <h3 style=""color: #1a9ead;"">Thanks for contacting authoranne.co.uk</h3>
                     <hr stle=""border: 2px solid #d51f45;"" />
                     </td>
                     </tr>

@@ -1,0 +1,20 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "name": "RWS Services",
+  "description": "Author and writer based in the north east of England",
+  "short_name": "authoranne.co.uk",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "scope": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "natural",
+  "theme_color": "#d51f45",
+  "background_color": "#f6f7e0"
+}
