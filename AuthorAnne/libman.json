@@ -3,14 +3,16 @@
   "defaultProvider": "cdnjs",
   "libraries": [
     {
-      "provider": "cdnjs",
       "library": "jquery@3.4.1",
       "destination": "wwwroot/lib/jquery/"
     },
     {
-      "provider": "cdnjs",
       "library": "twitter-bootstrap@4.3.1",
       "destination": "wwwroot/lib/twitter-bootstrap/"
+    },
+    {
+      "library": "font-awesome@5.8.2",
+      "destination": "wwwroot/lib/font-awesome/"
     },
     {
       "library": "ekko-lightbox@5.3.0",
